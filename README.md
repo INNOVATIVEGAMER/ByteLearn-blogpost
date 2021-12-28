@@ -1,6 +1,17 @@
-# Getting Started with Create React App
+# ByteLearn BlogPost App By IG
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The assignment is created bby Prasad Patewar
+
+## About
+
+The react context is used to store the blogs data which is fetched at the start from blogs.json file contained in the data folder. The changed data will reamin untill you refresh the page.
+The routing is done using react-router-dom to keep it as a single page application.
+No UI library is used, ALL is custonm css.
+
+## Deployed Link
+
+You ca use this application by going to this deployed link -
+[Bytelearn-BlogPost-App](https://bytelearn-blogpost-ig.herokuapp.com/)
 
 ## Available Scripts
 
