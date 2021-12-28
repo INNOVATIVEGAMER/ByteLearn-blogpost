@@ -1,0 +1,28 @@
+.editBtn,
+.deleteBtn,
+.backBtn {
+  padding: 1rem 2rem;
+  background-color: antiquewhite;
+  margin: 1rem;
+}
+
+.blog {
+  padding: 3rem;
+}
+
+.blogBtns {
+  text-align: center;
+}
+
+.blogBody {
+  text-align: center;
+}
+
+.blogHeader {
+  margin: 1rem;
+}
+
+.blogContent {
+  padding: 2rem;
+  border-top: 1px solid antiquewhite;
+}

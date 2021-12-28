@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Dashboard from "./Features/Dashboard/Dashboard";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import BlogForm from "./Features/Blogs/BlogForm";
+import Blog from "./Features/Blogs/Blog";
+import AppContext from "./AppContext";
+import blogsData from "./Data/Blogs.json";
+import { useState } from "react";
 
 function App() {
+  const [blogs, setblogs] = useState(blogsData);
+  const contextValue = {
+    data: {
+      blogs,
+    },
+    setblogs,
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContext.Provider value={contextValue}>
+      <div className="App">
+        <Router>
+          <Switch>
+            <Route path="/" exact>
+              <Dashboard />
+            </Route>
+            <Route path="/new" exact>
+              <BlogForm />
+            </Route>
+            <Route path="/:id" exact>
+              <Blog />
+            </Route>
+            <Route path="/:id/edit" exact>
+              <BlogForm />
+            </Route>
+          </Switch>
+        </Router>
+      </div>
+    </AppContext.Provider>
   );
 }
 

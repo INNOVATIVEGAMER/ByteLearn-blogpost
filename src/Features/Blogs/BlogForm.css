@@ -1,0 +1,31 @@
+.backBtn {
+  padding: 1rem 2rem;
+  background-color: antiquewhite;
+  margin: 1rem;
+}
+
+.form {
+  padding: 2rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.titleLabel,
+.contentLabel {
+  display: block;
+  margin: 1rem;
+}
+
+.titleInput,
+.contentInput {
+  margin-bottom: 1rem;
+  width: 50%;
+  padding: 1rem 0.5rem;
+}
+
+.submitBtn {
+  display: block;
+  margin: auto;
+  padding: 1rem 5rem;
+  background-color: aliceblue;
+}
